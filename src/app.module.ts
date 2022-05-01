@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Book } from './library/entities/book.entity';
 import { LibraryModule } from './library/library.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -17,7 +18,7 @@ import { LibraryModule } from './library/library.module';
       entities: [Book],
       synchronize: true,
       dropSchema: true
-    }), LibraryModule
+    }), LibraryModule, UsersModule
   ],
   controllers: [AppController],
   providers: [AppService],
